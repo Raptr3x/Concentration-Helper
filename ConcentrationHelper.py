@@ -66,14 +66,12 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def checkTime(self):
         if time.time() > self.startTime+self.workingSeconds:
             return True
-        else:
-            return False
+        return False
 
     def stringCheck(self):
         if not len(self.fileName) <= 0:
             return True
-        else:
-            return False
+        return False
 
     def addProgramsToBlockList(self):
         #kad se klikne, dodaj izabrane .exe fajlove na QList - Uradjeno
@@ -108,8 +106,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         for proc in psutil.process_iter():
             if proc.name() == self.name:
                 return True
-        else:
-            return False
+        return False
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
