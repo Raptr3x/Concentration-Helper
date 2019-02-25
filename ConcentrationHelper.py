@@ -3,12 +3,7 @@ from datetime import datetime
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QFileDialog, QMessageBox
 
-#TODO izradi UI i povezi dugmice - Uradjeno
-#TODO dozvoli korisniku da izabere program za blokirati - Uradjeno
-#TODO Program da prati da li je neki od programa sa blok liste ukljucen, ako jeste da ga blokira - Uradjeno
-#TODO Pre upisa fileName sa razmacima u csv fajl, treba ukloniti navodnike inace psutil ga ne moze ubiti kao proces - Uradjeno
-
-qtCreatorFile = "mainWindow.ui"  #ime fajla ubaci ovde
+qtCreatorFile = "mainWindow.ui"
 
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
