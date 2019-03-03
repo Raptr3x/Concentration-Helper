@@ -69,12 +69,10 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         return False
 
     def addProgramsToBlockList(self):
-        #kad se klikne, dodaj izabrane .exe fajlove na QList - Uradjeno
         self.fileName = QFileDialog().getOpenFileName(self, 'Add Program to block list', 'c:\\', "Exe files (*.exe)")
         self.fileName = self.fileName[0] #getting first value in fileName tuple
         self.fileName = self.fileName.split('/') #spliting it on each slash so I can easly take the file name out
         self.fileName = self.fileName[-1]
-        print(self.fileName) #making sure everything works fine (It does!! :D)
         with open('blockedPrograms.csv', 'a', newline='') as csvfile:
             writer = csv.writer(csvfile, delimiter='?')
             if self.stringCheck():
