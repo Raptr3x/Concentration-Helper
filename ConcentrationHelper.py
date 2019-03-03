@@ -93,9 +93,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def kill_process(self):
         for self.name in self.programsToKill:
             for proc in psutil.process_iter():
-                if proc.name() == self.name:
-                    if self.check_process_exist_by_name():
-                        proc.kill()
+                if proc.name() == self.name and self.check_process_exist_by_name():
+                    proc.kill()
 
     def check_process_exist_by_name(self):
         for proc in psutil.process_iter():
